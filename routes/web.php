@@ -28,3 +28,9 @@ Route::post('/feedback', "FeedbackController@store");
 Route::get('/contact', function () {
     return view('contact');
 });
+
+
+Route::post('/contact', "ContactController@contactPost");
+
+Route::get('reservation', 'ReservationController@reservation');
+Route::post('reservation', ['as'=>'reservation-form','uses'=>'ReservationController@reservationPost']);

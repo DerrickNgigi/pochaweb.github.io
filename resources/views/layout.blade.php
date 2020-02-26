@@ -65,17 +65,19 @@
 
         <div class="collapse navbar-collapse" id="ftco-nav">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href={{'/'}} class="nav-link">Home</a></li>
-                <li class="nav-item"><a href={{'/about'}} class="nav-link">About</a></li>
-                <li class="nav-item"><a href={{'/menu'}} class="nav-link">Menu</a></li>
+                <li class="nav-item {{ request()->is('/') ? 'active' : '' }}"><a href={{'/'}} class="nav-link">Home</a></li>
+                <li class="nav-item {{ request()->is('about') ? 'active' : '' }}"><a href={{"/about"}} class="nav-link">About</a></li>
+                <li class="nav-item {{ request()->is('menu') ? 'active' : '' }}"><a href={{'/menu'}} class="nav-link">Menu</a></li>
                 <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
-                <li class="nav-item"><a href={{'/contact'}} class="nav-link">Contact</a></li>
-                <li class="nav-item cta"><a href="reservation.html" class="nav-link">Order</a></li>
+                <li class="nav-item {{ request()->is('contact') ? 'active' : '' }}"><a href={{'/contact'}} class="nav-link">Contact</a></li>
+                <li class="nav-item cta"><a href={{'/reservation'}} class="nav-link">Reservation</a></li>
             </ul>
         </div>
     </div>
 </nav>
 <!-- END nav -->
+
+@yield ('content')
 
 <footer class="ftco-footer ftco-bg-dark ftco-section">
     <div class="container-fluid px-md-5 px-3">
@@ -110,13 +112,7 @@
                 <div class="ftco-footer-widget mb-4">
                     <h2 class="ftco-heading-2">Newsletter</h2>
                     <p>Far far away, behind the word mountains, far from the countries.</p>
-                    <form action="#" class="subscribe-form">
-                        <div class="form-group">
-                            <input type="text" class="form-control mb-2 text-center"
-                                   placeholder="Enter email address">
-                            <input type="submit" value="Subscribe" class="form-control submit px-3">
-                        </div>
-                    </form>
+
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
@@ -176,8 +172,6 @@
 <script src="js/bootstrap-datepicker.js"></script>
 <script src="js/jquery.timepicker.min.js"></script>
 <script src="js/scrollax.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false">
-</script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
 
