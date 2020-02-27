@@ -2,7 +2,7 @@
 
 @section ('content')
 
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2" style="background-image: url('imaxges/bg_3.jpg');" data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-center">
@@ -30,12 +30,13 @@
                     <div class="text">
                         <div class="d-flex">
                             <div class="one-half">
-                                <h3>{{$menu->Name}}</h3>
+                                <h3>{{$menu->name}}</h3>
                             </div>
                             <div class="one-forth">
-                                <span class="price">{{$menu->price}}</span>
+                                <span class="price">Ksh {{$menu->price}}</span>
                             </div>
                         </div>
+                        <p><span>{{$menu->description}}</span></p>
                     </div>
                 </div>
             </div>

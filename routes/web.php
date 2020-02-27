@@ -16,7 +16,7 @@ Route::get('/', "FeedbackController@show",function () {
     return view('home');
 }) ->name('home');
 
-Route::get('/menu', "MenuController@index");
+Route::get('/menu', "MainfoodmenuController@index");
 
 Route::get('/about', function () {
     return view('about');
@@ -29,8 +29,12 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-
 Route::post('/contact', "ContactController@contactPost");
 
 Route::get('reservation', 'ReservationController@reservation');
 Route::post('reservation', ['as'=>'reservation-form','uses'=>'ReservationController@reservationPost']);
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Voyager::routes();
+});
