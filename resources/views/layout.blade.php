@@ -2,9 +2,29 @@
 <html lang="en">
 
 <head>
-    <title>Pocha</title>
+    <title>Pocha254</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--  Essential META Tags -->
+
+<meta property="og:title" content="Pocha254 Restaurant">
+<meta property="og:description" content="Japanese Meals.">
+<meta property="og:image" content="http://pochakenya.com">
+<meta property="og:url" content="http://pochakenya.com">
+<meta name="twitter:card" content="Pocha254">
+
+
+<!--  Non-Essential, But Recommended -->
+
+<meta property="og:site_name" content="Pocha254 Restaurant.">
+<meta name="twitter:image:alt" content="Alt text for image">
+
+
+<!--  Non-Essential, But Required for Analytics -->
+
+<meta property="fb:app_id" content="your_app_id" />
+<meta name="twitter:site" content="@website-username">
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
@@ -57,7 +77,7 @@
 </div>
 <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
     <div class="container">
-        <a class="navbar-brand" href="{{''}}">Pocha</a>
+        <a class="navbar-brand" href="{{''}}">Pocha254</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="oi oi-menu"></span> Menu
