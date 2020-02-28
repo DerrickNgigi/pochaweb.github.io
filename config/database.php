@@ -17,7 +17,10 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    // 'default' => env('DB_CONNECTION', 'mysql'),
+
+    'default' => env('DB_CONNECTION', 'pgsql'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -43,7 +46,7 @@ return [
             'url' => env('DATABASE_URL'),
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
-            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+            'foreign_key_constraints' => env('DB_FOREI N_KEYS', true),
         ],
 
         'mysql' => [
@@ -66,28 +69,28 @@ return [
             ]) : [],
         ],
 
-//        'pgsql' => [
-//            'driver' => 'pgsql',
-//            'host' => $DATABASE_URL["host"],
-//            'port' => $DATABASE_URL["port"],
-//            'database' => ltrim($DATABASE_URL["path"], "/"),
-//            'username' => $DATABASE_URL["user"],
-//            'password' => $DATABASE_URL["pass"],
-//            'charset' => 'utf8',
-//            'prefix' => '',
-//            'schema' => 'public',
-//            'sslmode' => 'require',
-        'pgsql' => [
-            'driver' => 'pgsql',
-            'host' => "host",
-            'port' => "port",
-            'database' => "path",
-            'username' => "user",
-            'password' => "pass",
-            'charset' => 'utf8',
-            'prefix' => '',
-            'schema' => 'public',
-            'sslmode' => 'require',
+       'pgsql' => [
+           'driver' => 'pgsql',
+           'host' => $DATABASE_URL["host"],
+           'port' => $DATABASE_URL["port"],
+           'database' => ltrim($DATABASE_URL["path"], "/"),
+           'username' => $DATABASE_URL["user"],
+           'password' => $DATABASE_URL["pass"],
+           'charset' => 'utf8',
+           'prefix' => '',
+           'schema' => 'public',
+           'sslmode' => 'require',
+        // 'pgsql' => [
+        //     'driver' => 'pgsql',
+        //     'host' => "host",
+        //     'port' => "port",
+        //     'database' => "path",
+        //     'username' => "user",
+        //     'password' => "pass",
+        //     'charset' => 'utf8',
+        //     'prefix' => '',
+        //     'schema' => 'public',
+        //     'sslmode' => 'require',
         ],
         'sqlsrv' => [
             'driver' => 'sqlsrv',
